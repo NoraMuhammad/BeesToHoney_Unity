@@ -12,20 +12,21 @@ public class Bees : MonoBehaviour
     {
         target = Raycaster.HitPoint;
 
-        if(target!=null)
-        MoveToHoney();
+        if (target != Vector3.zero)
+            MoveToHoney();
     }
     public void MoveToHoney()
     {
-        transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
-        if (Vector3.Distance(transform.position, target) < 1.0f && speed > 0)
+        float _distance = Vector3.Distance(transform.position, target);
+        if (_distance < 0.5f && speed > 0)
         {
-            speed = 0;
-        }
-        else if (Vector3.Distance(transform.position, target) > 1.0f)
-        {
+            speed = Mathf.Max(speed - 0.1f, 0);
             transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+        }
+        else if (_distance > 0.5f)
+        {
             speed = 1;
+            transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
         }
      
     }
