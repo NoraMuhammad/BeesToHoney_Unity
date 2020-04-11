@@ -587,7 +587,6 @@ GameObject:
   - component: {fileID: 440688403}
   - component: {fileID: 440688402}
   - component: {fileID: 440688401}
-  - component: {fileID: 440688405}
   - component: {fileID: 440688406}
   m_Layer: 0
   m_Name: Sphere
@@ -664,28 +663,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 440688400}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.57000005, y: 0.7278, z: 0.2625}
+  m_LocalPosition: {x: 0, y: 0.7278, z: 3.13}
   m_LocalScale: {x: 0.19500001, y: 0.19500001, z: 0.19500001}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &440688405
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 440688400}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!215 &440688406
 ReflectionProbe:
   m_ObjectHideFlags: 0
@@ -754,6 +737,55 @@ Transform:
   - {fileID: 1189473524}
   m_Father: {fileID: 0}
   m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &597651036
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 597651038}
+  - component: {fileID: 597651037}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &597651037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597651036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d35046cece7915748bb11db943844b70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  target: {fileID: 440688404}
+  bees:
+  - {fileID: 1543435172}
+  - {fileID: 867024821}
+  - {fileID: 1544748170}
+--- !u!4 &597651038
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597651036}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.3296889, y: 1.2852062, z: 2.9059644}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &618470725
 GameObject:
@@ -986,7 +1018,6 @@ GameObject:
   m_Component:
   - component: {fileID: 867024822}
   - component: {fileID: 867024826}
-  - component: {fileID: 867024825}
   - component: {fileID: 867024824}
   - component: {fileID: 867024823}
   m_Layer: 0
@@ -1004,7 +1035,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 867024821}
   m_LocalRotation: {x: -0, y: 0.95476896, z: -0, w: 0.29734868}
-  m_LocalPosition: {x: 0.669, y: 0.91800004, z: 0.49050003}
+  m_LocalPosition: {x: 0.669, y: 1.97, z: 7.91}
   m_LocalScale: {x: 0.18000002, y: 0.18, z: 0.18000002}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1062,22 +1093,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &867024825
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 867024821}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!33 &867024826
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1820,7 +1835,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1543435177}
   - component: {fileID: 1543435176}
-  - component: {fileID: 1543435173}
   - component: {fileID: 1543435175}
   - component: {fileID: 1543435174}
   m_Layer: 0
@@ -1830,22 +1844,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!54 &1543435173
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1543435172}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!23 &1543435174
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1914,7 +1912,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1543435172}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 0.69, y: 0.732, z: 0.485}
+  m_LocalPosition: {x: 0.69, y: 1.784, z: 7.9045}
   m_LocalScale: {x: 0.18, y: 0.18, z: 0.18}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1930,7 +1928,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1544748171}
   - component: {fileID: 1544748175}
-  - component: {fileID: 1544748174}
   - component: {fileID: 1544748173}
   - component: {fileID: 1544748172}
   m_Layer: 0
@@ -1948,7 +1945,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1544748170}
   m_LocalRotation: {x: 0.00091541244, y: 0.9876479, z: 0.0001299376, w: -0.15668705}
-  m_LocalPosition: {x: 0.48900002, y: 0.73800004, z: 0.303}
+  m_LocalPosition: {x: 0.48900002, y: 1.7900001, z: 7.7225}
   m_LocalScale: {x: 0.18000005, y: 0.17999999, z: 0.18000008}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2006,22 +2003,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &1544748174
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1544748170}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!33 &1544748175
 MeshFilter:
   m_ObjectHideFlags: 0
