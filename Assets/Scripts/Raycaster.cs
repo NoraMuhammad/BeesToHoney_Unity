@@ -5,13 +5,13 @@ using UnityEngine;
 public class Raycaster : MonoBehaviour
 {
     [SerializeField] GameObject RaycastSpot;
-    [HideInInspector] public static Transform HitPoint;
+    [HideInInspector] public static Vector3 HitPoint;
     RaycastHit hit;
     GameObject spot;
     private void Start()
     {
         hit = new RaycastHit();
-        HitPoint = hit.transform;
+        HitPoint = hit.point;
         spot = Instantiate(RaycastSpot, hit.point, Quaternion.identity);
         spot.SetActive(false);
     }
@@ -21,7 +21,7 @@ public class Raycaster : MonoBehaviour
         {
             spot.SetActive(true);
             spot.transform.position = hit.point;
-            HitPoint = hit.transform;
+            HitPoint = hit.point;
         }
         else if(spot != null)
         {
