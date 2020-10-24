@@ -21,13 +21,13 @@ public class Bees : MonoBehaviour
         if (_distance < 0.5f && speed > 0)
         {
             speed = Mathf.Max(speed - 0.1f, 0);
-            transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
         }
         else if (_distance > 0.5f)
         {
             speed = 1;
-            transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
         }
-     
+
+        transform.LookAt(target);
+        transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
     }
 }
